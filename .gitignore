@@ -1,0 +1,59 @@
+# ---------------------------------------------------
+# CMake & Build Directories
+# ---------------------------------------------------
+build/
+out/
+bin/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# ---------------------------------------------------
+# Compiled Object Files & Artifacts
+# ---------------------------------------------------
+*.o
+*.obj
+*.d
+
+# ---------------------------------------------------
+# Compiled Libraries
+# ---------------------------------------------------
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# ---------------------------------------------------
+# Executables
+# ---------------------------------------------------
+*.exe
+*.out
+*.app
+
+# ---------------------------------------------------
+# Visual Studio Code
+# ---------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+
+# ---------------------------------------------------
+# OS-Specific Files (Windows 11)
+# ---------------------------------------------------
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Windows folder configuration files
+desktop.ini
+
+# Windows shortcuts
+*.lnk
