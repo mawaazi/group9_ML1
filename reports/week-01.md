@@ -35,7 +35,9 @@
     1. Generation of the file "Github_group_workflow_guide" which guides a newly added collaborator how to proceed step by step as Mr. Steven desired. The file includes brief explanations of some commands and keywords as well as a plain english version or in "lay-man's language"
     2. Generation of the file "Git_Concepts_Explained" which briefly explains git concepts relevant to this project.
     3. Generation of the tasks.json and c_cpp_properties.json files tailored for c++23
-    4. Claude was also used to give a crash course on libraries, headers and implementation. 
-
+    4. Claude was also used to give a crash course on libraries, headers and implementation.
+    5. Proper work division amongst the team and creation of boundaries in ml_pipeline.cpp
+    6. Flow control, analysis, advice on dummy return variables and improvements to make sure codespace successfully compiles on any device on which it is downloaded.
+       
 - Reason:
    1. Claude AI is widely known for its superiority in the software engineering world and as such was deemed a good pick for most of the questions the team had regarding the project, tools to be used and any unknown technical terms or processes.
