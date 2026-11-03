@@ -1,39 +1,43 @@
-cmake_minimum_required(VERSION 3.10)
-project(GROUP9_ML1)
+cmake_minimum_required(VERSION 3.20)
+project(MLLibrary VERSION 1.0.0 LANGUAGES CXX)
 
-cmake_minimum_required(VERSION 3.16)
-
-project(Group9ML1 LANGUAGES CXX)
-
-set(CMAKE_CXX_STANDARD 17)
+# Enforce modern C++23 standard globally
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-include_directories(include)
+# Tell the compiler where to find public header files
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_executable(ml_project
-    src/main.cpp
-    src/ml_pipeline.cpp
+# Compile your library implementation files together into a static library target
+add_library(ml_library 
+    src/train_test_split.cpp 
+    src/statistical_significance.cpp
 )
 
-add_library(closed_form src/closed_form.cpp)
-
-add_executable(closed_form_example
-    examples/closed_form_example.cpp
-)
-target_link_libraries(closed_form_example PRIVATE closed_form)
-
-add_executable(test_closed_form
-    tests/test_closed_form.cpp
-)
-target_link_libraries(test_closed_form PRIVATE closed_form)
-
+# Enable CTest runner support
 enable_testing()
-add_test(NAME ClosedFormTests COMMAND test_closed_form)
-# Set C++ standard
-set(CMAKE_CXX_STANDARD 17)
 
-# Tell the compiler where to find header files
-include_directories(include)
+# ==========================================
+# TEST EXECUTABLES
+# ==========================================
+add_executable(test_train_test_split tests/test_train_test_split.cpp)
+target_link_libraries(test_train_test_split PRIVATE ml_library)
 
-# Stitch the source files together into an executable
-add_executable(ml_project src/main.cpp src/ml_pipeline.cpp)
+add_executable(test_statistical_significance tests/test_statistical_significance.cpp)
+target_link_libraries(test_statistical_significance PRIVATE ml_library)
+
+# ==========================================
+# EXAMPLE EXECUTABLES
+# ==========================================
+add_executable(example_split examples/train_test_split_example.cpp)
+target_link_libraries(example_split PRIVATE ml_library)
+
+add_executable(example_significance examples/significance_example.cpp)
+target_link_libraries(example_significance PRIVATE ml_library)
+
+# ==========================================
+# AUTOMATED CTEST REGISTRATION
+# ==========================================
+add_test(NAME TrainTestSplitTest COMMAND test_train_test_split)
+add_test(NAME StatisticalSignificanceTest COMMAND test_statistical_significance)
