@@ -3,37 +3,46 @@
 
 #include <vector>
 #include <utility>
+#include <concepts>
+#include <stdexcept>
+#include <cstddef>
 
-/// @brief creating a new namespace so i can freely name classes and functions
 namespace ml_library {
     
-    /// @brief this struct is for holding the trainng and testing dataa partions
+    //restricting data types strictly to numbers(int, float, double, short, etc)
+    template <typename T>
+    concept Numeric = std::integral<T> || std::floating_point<T>;
+
+    //this struct is for holding the trainng and testing dataa partions
+    template <Numeric T>
     struct SplitResult {
-        std::vector<double> train_data;
-        std::vector<double> test_data;
+        std::vector<T> train_data;
+        std::vector<T> test_data;
     };
 
-    /// @brief this class splits datasets into training and testing subsets
+    //this class splits datasets into training and testing subsets
     class TrainTestSplitter {
         public:
-            /// @brief this function splits a single dataset vector into train and test subsets
+            //splits a single dataset vector into train and test subsets
             /// @param data the complete input dataset
             /// @param test_ratio fraction of data reserrved for testing e.g 0.2 for 20%
             /// @param seed he optional random seed for reproducible shuffling
             /// @return SplitResult containing train aand test vectors
-            static SplitResult split(const std::vector<double>& data, double test_ratio, unsigned int seed = 42);
+            template <Numeric T>
+            static SplitResult<T> split(const std::vector<T>& data, double test_ratio, unsigned int seed = 42);
             
-            /// @brief Splits paired feature vectors (X) and target vectors (y) simultaneously.
-            /// Keeps features and labels synchronized for machine learning models 
-            static std::pair<SplitResult, Splitresult> splitPaired(
-                const std::vector<double>& X,
-                const std::vector<double>& Y,
+            //Splits paired feature vectors (X) and target vectors (y) simultaneously. 
+            template <Numeric FeatureT, Numeric TargetT> 
+            static std::pair<SplitResult<FeatureT>, SplitResult<TargetT>> splitPaired(
+                const std::vector<FeatureT>& X,
+                const std::vector<TargetT>& y,
+                double test_ratio,
                 unsigned int seed = 42
             );
         
         private:
-        /// @brief this helper function validates the size and test dataset ratios
-        static void validateInputs(size_t data_size, double test_ratio);    
+        //this helper function ensures inputs are valid numerical data and sizes. throws invalid-argument if violated
+        static void validateInputs(std::size_t data_size, double test_ratio);    
     };
 
 
