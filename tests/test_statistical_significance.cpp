@@ -2,7 +2,7 @@
 #include <vector>
 #include <cassert>
 #include <stdexcept>
-#include "ml_library/statistical_significance.hpp"
+#include "machine_learning_1/statistical_significance.hpp"
 
 void testSlopeSignificance() {
     std::cout << "[TEST] Running Slope Statistical Significance Test...\n";

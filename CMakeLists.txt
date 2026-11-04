@@ -10,7 +10,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Compile your library implementation files together into a static library target
-add_library(ml_library 
+add_library(machine_learning_1 
     src/train_test_split.cpp 
     src/statistical_significance.cpp
 )
@@ -22,19 +22,19 @@ enable_testing()
 # TEST EXECUTABLES
 # ==========================================
 add_executable(test_train_test_split tests/test_train_test_split.cpp)
-target_link_libraries(test_train_test_split PRIVATE ml_library)
+target_link_libraries(test_train_test_split PRIVATE machine_learning_1)
 
 add_executable(test_statistical_significance tests/test_statistical_significance.cpp)
-target_link_libraries(test_statistical_significance PRIVATE ml_library)
+target_link_libraries(test_statistical_significance PRIVATE machine_learning_1)
 
 # ==========================================
 # EXAMPLE EXECUTABLES
 # ==========================================
 add_executable(example_split examples/train_test_split_example.cpp)
-target_link_libraries(example_split PRIVATE ml_library)
+target_link_libraries(example_split PRIVATE machine_learning_1)
 
 add_executable(example_significance examples/significance_example.cpp)
-target_link_libraries(example_significance PRIVATE ml_library)
+target_link_libraries(example_significance PRIVATE machine_learning_1)
 
 # ==========================================
 # AUTOMATED CTEST REGISTRATION

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "ml_library/train_test_split.hpp"
+#include "machine_learning_1/train_test_split.hpp"
 
 int main() {
     std::cout<< "=== Train/test split Example (Integer anf foat support) ===\n";
