@@ -7,7 +7,7 @@ using namespace std;
 namespace LinearRegression{
 
     vector<double> computeGradientDescent(
-        const vector<vector<double>>& X,
+        const vector<vector<double>>& x,
         const vector<double>& y,
         vector<double> weights,
         double learningRate,
@@ -15,7 +15,7 @@ namespace LinearRegression{
     )
     
     {
-        size_t m = X.size(); // Number of data samples
+        size_t m = x.size(); // Number of data samples
 
         if (m == 0) {
             return weights;
@@ -23,7 +23,7 @@ namespace LinearRegression{
 
         if (y.size() != m) {
             throw invalid_argument(
-                "The number of samples in X must match the number of values in y."
+                "The number of samples in x must match the number of values in y."
             );
         }
 
@@ -51,9 +51,9 @@ namespace LinearRegression{
 
         
         for (size_t i = 0; i < m; ++i) {
-            if (X[i].size() != numberOfFeatures) {
+            if (x[i].size() != numberOfFeatures) {
                 throw invalid_argument(
-                    "Number of features in X does not match the number of weights."
+                    "Number of features in x does not match the number of weights."
                 );
             }
         }
@@ -71,7 +71,7 @@ namespace LinearRegression{
                 double prediction = weights[0]; // Intercept
 
                 for (size_t j = 1; j < n; ++j) {
-                    prediction += X[i][j - 1] * weights[j];
+                    prediction += x[i][j - 1] * weights[j];
                 }
 
                 predictions[i] = prediction;
@@ -94,7 +94,7 @@ namespace LinearRegression{
                         featureVal = 1.0;
                     }
                     else {
-                        featureVal = X[i][j - 1];
+                        featureVal = x[i][j - 1];
                     }
 
                     gradientSum += error * featureVal;
