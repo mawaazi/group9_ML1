@@ -312,7 +312,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 ## Commit History Proof of Contribution
 
 You can view individual member commits on our official GitHub Repository:
-* View contributions by **Mawaazi Abdulrahman Shihubbi**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[YOUR-USERNAME]`
+* View contributions by **Mawaazi Abdulrahman**: `https://github.com/mawaazi/group9_ML1/commits/main?author=mawaazi&before=c522143e4e564744434ec8f4f80bf46a6b09cb4a+35`
 * View contributions by **[MEMBER 2]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
 * View contributions by **[MEMBER 3]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
 * View contributions by **[MEMBER 4]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
