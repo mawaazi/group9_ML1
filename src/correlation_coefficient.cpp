@@ -56,6 +56,6 @@ double Correlation::pearson(const std::vector<double>& x,
     // Separate square roots avoid multiplying two large sums.
     const long double r = (sumXY / std::sqrt(sumXX)) / std::sqrt(sumYY);
     // Allow for small rounding errors at -1 and 1.
-    return static_cast<double>(std::clamp(r, -1.0L, 1.0L));
+    return static_cast<double>(std::max(-1.0L, std::min(r, 1.0L)));
 }
 }
