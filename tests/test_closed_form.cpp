@@ -1,55 +1,92 @@
 
-#include "machine_learning_1/closed_form.hpp"
+#include "ml_library/closed_form.hpp"
+
 #include <iostream>
+#include <vector>
 #include <cmath>
 #include <stdexcept>
 
 using namespace std;
 
+bool approximatelyEqual(double a, double b) {
+    return abs(a - b) < 1e-6;
+}
+
 int main() {
-    // Training data
+
+    ClosedFormRegression model;
+
+    // Test data based on y = 10 + 2x.
     vector<vector<double>> X = {
-        {1, 6},
-        {2, 8},
-        {3, 7},
-        {4, 9}
+        {1},
+        {2},
+        {3},
+        {4}
     };
 
-    vector<double> y = {40, 50, 60, 70};
+    vector<double> y = {
+        12, 14, 16, 18
+    };
 
-    // Test 1: Calculate the coefficients
-    vector<double> coefficients = fit(X, y);
-
-    if (coefficients.size() != 3) {
-        cout << "Test 1 failed: Wrong number of coefficients." << endl;
-        return 1;
-    }
-
-    cout << "Test 1 passed: Coefficients calculated." << endl;
-
-    // Test 2: Check the predicted score
-    vector<double> new_student = {5, 8};
-    double prediction = predict(coefficients, new_student);
-
-    if (abs(prediction - 80.0) > 1e-6) {
-        cout << "Test 2 failed: Prediction is incorrect." << endl;
-        return 1;
-    }
-
-    cout << "Test 2 passed: Prediction is correct." << endl;
-
-    // Test 3: Check invalid feature count
+    // Test 1: Check coefficient calculation.
     try {
-        vector<double> wrong_features = {5};
-        predict(coefficients, wrong_features);
+        model.fit(X, y);
 
-        cout << "Test 3 failed: Invalid features were accepted." << endl;
+        vector<double> coefficients = model.get_coefficients();
+
+        if (approximatelyEqual(coefficients[0], 10) &&
+            approximatelyEqual(coefficients[1], 2)) {
+            cout << "Test 1 passed: Coefficients calculated correctly.\n";
+        } else {
+            cout << "Test 1 failed: Incorrect coefficients.\n";
+            return 1;
+        }
+
+    } catch (const exception& e) {
+        cout << "Test 1 failed: " << e.what() << endl;
         return 1;
-    } catch (const invalid_argument&) {
-        cout << "Test 3 passed: Invalid features rejected." << endl;
     }
 
-    cout << "All tests passed!" << endl;
+    // Test 2: Check prediction.
+    try {
+        double prediction = model.predict({5});
+
+        if (approximatelyEqual(prediction, 20)) {
+            cout << "Test 2 passed: Prediction is correct.\n";
+        } else {
+            cout << "Test 2 failed: Incorrect prediction.\n";
+            return 1;
+        }
+
+    } catch (const exception& e) {
+        cout << "Test 2 failed: " << e.what() << endl;
+        return 1;
+    }
+
+    // Test 3: Check invalid feature dimensions.
+    try {
+        model.predict({5, 6});
+
+        cout << "Test 3 failed: Invalid features were accepted.\n";
+        return 1;
+
+    } catch (const invalid_argument&) {
+        cout << "Test 3 passed: Invalid features rejected.\n";
+    }
+
+    // Test 4: Check empty training data.
+    try {
+        model.fit({}, {});
+
+        cout << "Test 4 failed: Empty data was accepted.\n";
+        return 1;
+
+    } catch (const invalid_argument&) {
+        cout << "Test 4 passed: Empty training data rejected.\n";
+    }
+
+    cout << "\nAll tests passed!" << endl;
 
     return 0;
 }
+
