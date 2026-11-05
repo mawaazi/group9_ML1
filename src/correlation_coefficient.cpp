@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <cmath>
 #include <stdexcept>
-
 namespace statistics {
 Correlation::Correlation(const std::vector<double>& x,
                          const std::vector<double>& y)

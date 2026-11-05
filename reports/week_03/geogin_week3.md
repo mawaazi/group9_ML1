@@ -3,7 +3,7 @@ Member: Nakyobe Geogin Martha
 ## Completed
 - Design and implementation of the gradient_descent module to completion
 - Added an example file to be run by another user
-- Tested the output of the gradient_descent algorith (bias and learned weight) with different sets of data.
+- Tested the output of the gradient_descent algorithm (bias and learned weight) with different sets of data.
 
 ## In Progress
 - Researching and setting up the source files for another module, Stochastic Gradient Descent

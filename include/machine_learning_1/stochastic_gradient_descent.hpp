@@ -38,7 +38,7 @@ namespace LinearRegression{
             const std:: vector<std::vector<double>> &x,
             const std:: vector<double> &y,
             std:: vector<double> weights
-        )override;//overrides base class function with actual SDG implementation
+        )override;//overrides base class function with actual SGd implementation
     };
 
 

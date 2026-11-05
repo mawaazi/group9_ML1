@@ -3,55 +3,67 @@
 #include<iomanip>
 #include "../include/machine_learning_1/gradient_descent.hpp"
 
-using namespace std;
 
 int main(){
     /*
-    Example: learn the relationship y=2x
+    Example: learn the relationship y=2 + 3x1 +4x2
 
     Training data:
-    x=1, y=2
-    x=2, y=4
-    x=3, y=6
+    x1=1, x2=1, y=9
+    x1=2, x2=1, y=12
+    x1=1, x2=2, y=13
+    x1=2, x2=2, y=16
+    x1=3, x2=2, y=15
 
     The model is:
-    y_predicted = bias + (weight*x)
+    y_predicted = bias + (weight1*x1) + (weight2*x2)
 
     Parameters to learn:
     weights[0] = bias
-    weights[1] = weight for x
+    weights[1] = weight for x1
+    weights[2] = weight for x2
     */
-   vector<vector<double>> x = {
-    {1.0}, {2.0}, {3.0}
+   std::vector<vector<double>> x = {
+    {1.0, 1.0},
+    {2.0, 1.0},
+    {1.0, 2.0},
+    {2.0, 2.0},
+    {3.0, 1.0}
    };
 
-   vector<double> y ={5.0,8.0,11.0};
-   //First guess is that both the bias and weight are zero
-   vector<double> weights = {0.0,0.0};
+   std::vector<double> y ={9.0, 12.0,13.0, 16.0,15.0};
+
+   //First guess is that all parameters are zero
+   std::vector<double> weights = {0.0,0.0,0.0};
    double learningRate = 0.01;
-   int iterations = 1000;
+   int iterations = 5000;
 
-   cout<<fixed<<setprecision(6);
-   cout<<"\nStarting parameters: \n";
-   cout<<"Bias= "<<weights[0]<<'\n';
-   cout<<"Weight= "<<weights[1]<<'\n';
+   std::cout<<std::fixed<<std::setprecision(6);
+   std::cout<<"\nStarting parameters: \n";
+   std::cout<<"Bias= "<<weights[0]<<'\n';
+   std::cout<<"Weight1= "<<weights[1]<<'\n';
+   std::cout<<"Weight2= "<<weights[2]<<'\n';
 
-   //The function is declared in gradient_descent.hpp and implemented in gradient_descent.cpp
-   vector<double> finalWeights = LinearRegression:: computeGradientDescent(
+   //Perform gradient descent
+   std::vector<double> finalWeights = LinearRegression:: computeGradientDescent(
     x, y, weights, learningRate, iterations
    );
 
-   cout<< "After"<<iterations<< "iterations: \n";
-   cout<< "Learned bias ="<<finalWeights[0]<< '\n';
-   cout<< "Learned weight= "<< finalWeights[1]<< '\n';
+   std::cout<< "After"<<iterations<< "iterations: \n";
+   std::cout<< "Learned bias ="<<finalWeights[0]<< '\n';
+   std::cout<< "Learned weight 1= "<< finalWeights[1]<< '\n';
+   std::cout<< "Learned weight 2= "<< finalWeights[2]<< '\n';
 
-   cout<< "Predictions using the learned model:\n";
-   for(size_t i=0; i<x.size(); ++i){
-    double predictedy = finalWeights[0]+ finalWeights[1] *x[i][0];
-    cout<< "x= "<< x[i][0]<<", actual y= "<< y[i]
-    <<", predicted y= "<<predictedy<<'\n';
+   std::cout<< "Predictions using the learned model:\n";
+   for(size_t i=0; i < x.size(); ++i){
+    double predictedy = finalWeights[0]+ finalWeights[1] *x[i][0] + finalWeights[2]*x[i][1];
+
+    std::cout<< "x1= "<< x[i][0]<< ",x2= "<< x[i][1]<< ",actual y ="<<y[i]
+    <<",predicted y= "<<predictedy<<'\n';
    }
 
-   cout <<"\nExpected result: bias close to 2 and weight close to 3.\n";
+   std::cout <<"\nExpected result: bias close to 2,"
+   <<" weight 1 close to 3, and weight 2close to 4.\n ";
+    
    return 0;
 }

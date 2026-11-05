@@ -1,4 +1,7 @@
 # group9_ML1
+
+This is Group 9's project repository. We will be taking on Machine Learning 1 (linear regression from scratch)
+
 This is Group 9's project repository. We will be taking on Machine Learning 1 (Linear regression from scratch).
 
 
@@ -168,3 +171,5 @@ There are tests that check different types of correlations, large numbers, inval
 My contribution to the group project was the implementation of the Correlation Coefficient module, including its class structure, calculations, input validation and testing. The module successfully passed all 21 test checks.
 
 ChatGPT was used to assist with parts of the code, documentation, debugging and explanations. The code was compiled and tested in VS Code.
+
+This is Group 9's project repository. We will be taking on Machine Learning 1 (Linear regression from scratch)

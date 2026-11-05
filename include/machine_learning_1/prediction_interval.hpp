@@ -2,9 +2,14 @@
 #define PREDICTION_INTERVAL_HPP
 
 #include <vector>
-#include <utility>
 
-std::pair<double, double> calculatePredictionInterval(
+struct PredictionBounds {
+    double lower_bound;
+    double upper_bound;
+    double predicted_y;
+};
+
+PredictionBounds calculatePredictionInterval(
     double new_x,
     const std::vector<double>& x_data,
     const std::vector<double>& y_data,

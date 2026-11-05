@@ -1,40 +1,50 @@
 
 #include "machine_learning_1/closed_form.hpp"
+
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
 int main() {
-    // Training data: hours studied and hours slept
+
+    // Training input features.
     vector<vector<double>> X = {
-        {1, 6},
-        {2, 8},
-        {3, 7},
-        {4, 9}
+        {1, 2},
+        {2, 1},
+        {3, 4},
+        {4, 3},
+        {5, 5}
     };
 
-    // Actual exam scores
-    vector<double> y = {40, 50, 60, 70};
+    // Actual output values.
+    vector<double> y = {
+        50, 55, 80, 85, 100
+    };
 
-    // Calculate the regression coefficients
-    vector<double> coefficients = fit(X, y);
+    // Create a regression model.
+    ClosedFormRegression model;
+
+    // Train the model.
+    model.fit(X, y);
+
+    // Retrieve the coefficients.
+    vector<double> coefficients = model.get_coefficients();
 
     cout << "Regression coefficients:" << endl;
 
-    for (size_t i = 0; i < coefficients.size(); i++) {
-        cout << "b" << i << " = "
-             << coefficients[i] << endl;
+    for (size_t i = 0; i < coefficients.size(); ++i) {
+        cout << "b" << i << " = " << coefficients[i] << endl;
     }
 
-    // Predict the score for a student who studied 5 hours
-    // and slept for 8 hours
-    vector<double> new_student = {5, 8};
+    // Predict the output for a new observation.
+    vector<double> newStudent = {6, 4};
 
-    double predicted_score = predict(coefficients, new_student);
+    double prediction = model.predict(newStudent);
 
-    cout << "Predicted exam score: "
-         << predicted_score << endl;
+    cout << "\nPredicted examination score: "
+         << prediction << endl;
 
     return 0;
 }
+
