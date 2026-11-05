@@ -1,19 +1,23 @@
-
 #ifndef CLOSED_FORM_HPP
 #define CLOSED_FORM_HPP
 
 #include <vector>
 
-using namespace std;
+class ClosedFormRegression {
+private:
+    std::vector<double> coefficients;
 
-vector<double> fit(
-    const vector<vector<double>>& X,
-    const vector<double>& y
-);
+public:
+    void fit(
+        const std::vector<std::vector<double>>& X,
+        const std::vector<double>& y
+    );
 
-double predict(
-    const vector<double>& coefficients,
-    const vector<double>& features
-);
+    double predict(
+        const std::vector<double>& features
+    ) const;
 
-#endif
+    std::vector<double> get_coefficients() const;
+};
+
+#endif // closed_form.hpp

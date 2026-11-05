@@ -2,83 +2,232 @@
 This is Group 9's project repository. We will be taking on Machine Learning 1 (Linear regression from scratch).
 
 
-## (A) Closed-Form Equations Module
+# Closed-Form Multiple Linear Regression
+## 1. Overview
+This module implements **multiple linear regression using the closed-form method** in C++.
 
-### Overview
+Multiple linear regression is a supervised machine-learning algorithm used to predict a numerical output using two or more input features.
 
-This module implements three mathematical formulas for calculating the sum of a sequence of numbers. Instead of adding every term one by one, the formulas calculate the total directly.
+The model learns the relationship between the input features and the target output by calculating the regression coefficients from the training data.
 
-### 1. Sum of Natural Numbers
+Unlike iterative learning methods, the closed-form approach calculates the coefficients by solving a system of mathematical equations.
 
-This function calculates the sum of the first n natural numbers.
+## 2. Mathematical Background
+The general multiple linear regression equation is:
 
-**Formula:**
-
-S = n * (n + 1) / 2
-
-**Function:** `sum_natural_numbers(int n)`
-
-**Example:** For n = 10:
-
-S = 10 * (10 + 1) / 2 = 55
-
-### 2. Arithmetic Series Sum
-
-An arithmetic series is a sequence in which the difference between consecutive terms is constant.
-
-**Formula:**
-
-S = n * (2 * a + (n - 1) * d) / 2
+\[\hat{y}=b_0+b_1x_1+b_2x_2+\cdots+b_px_p\]
 
 Where:
-- n = number of terms
-- a = first term
-- d = common difference
 
-**Function:** `arithmetic_series_sum(int n, double a, double d)`
+- \(\hat{y}\) is the predicted output.
+- \(b_0\) is the intercept.
+- \(b_1,b_2,\ldots,b_p\) are the regression coefficients.
+- \(x_1,x_2,\ldots,x_p\) are the input features.
+- \(p\) is the number of input features.
 
-**Example:** For n = 5, a = 5, and d = 3:
+The coefficients are calculated using the **normal equations**:
 
-S = 5 * (2 * 5 + (5 - 1) * 3) / 2 = 55
+\[
+(A^TA)b=A^Ty
+\]
 
-The sequence is 5, 8, 11, 14, 17.
+The equivalent closed-form expression, when the inverse exists, is:
 
-### 3. Geometric Series Sum
-
-A geometric series is a sequence in which each term is obtained by multiplying the previous term by a constant ratio.
-
-**Formula when r is not equal to 1:**
-
-S = a * (1 - r^n) / (1 - r)
-
-When r = 1, the formula becomes:
-
-S = n * a
+\[
+\boxed{b=(A^TA)^{-1}A^Ty}
+\]
 
 Where:
-- n = number of terms
-- a = first term
-- r = common ratio
 
-**Function:** `geometric_series_sum(int n, double a, double r)`
+- \(A\) is the design matrix, including a column of ones for the intercept.
+- \(A^T\) is the transpose of the design matrix.
+- \(y\) is the vector of actual target values.
+- \(b\) is the vector of unknown regression coefficients.
+- \((A^TA)^{-1}\) is the inverse of the matrix \(A^TA\).
 
-**Example:** For n = 4, a = 2, and r = 3:
+This implementation solves the normal equations using **Gaussian elimination**, rather than explicitly calculating the matrix inverse.
 
-S = 2 * (1 - 3^4) / (1 - 3) = 80
+## 3. Features
+The module provides the following functionality:
+- Accepts multiple input features and corresponding target values.
+- Validates the training data before performing calculations.
+- Constructs the design matrix, including the intercept column.
+- Calculates the normal equation components.
+- Solves the resulting system using Gaussian elimination.
+- Stores the learned regression coefficients.
+- Predicts numerical outputs for new observations.
+- Provides access to the learned coefficients.
+- Handles invalid inputs and singular matrices using exceptions.
 
-The sequence is 2, 6, 18, 54.
+## 4. Project Structure
+The implementation is organised into the following files:
 
-### Project Files
+```text
+include/
+└── machine_learning_1/
+    └── closed_form.hpp
 
-- `include/closed_form.hpp` — contains the function declarations.
-- `src/closed_form.cpp` — contains the calculations.
-- `examples/closed_form_example.cpp` — demonstrates how to use the functions.
-- `tests/test_closed_form.cpp` — checks whether the functions produce the expected results.
+src/
+└── closed_form.cpp
 
-### Input Validation
+examples/
+└── closed_form_example.cpp
 
-The functions reject negative values of n by throwing an `invalid_argument` exception.
+tests/
+└── test_closed_form.cpp
+```
 
+### File descriptions
+**closed_form.hpp**
 
+Declares the `ClosedFormRegression` class, its private coefficient storage, and its public functions.
 
+**closed_form.cpp**
 
+Contains the implementation of the regression algorithm, including data validation, matrix calculations, Gaussian elimination, and prediction.
+
+**closed_form_example.cpp**
+
+Demonstrates how to create a regression model, train it, retrieve its coefficients, and make predictions.
+
+**test_closed_form.cpp**
+
+Contains tests that check coefficient calculation, prediction, and invalid input handling.
+
+## 5. Class Interface
+
+The module implements the `ClosedFormRegression` class.
+
+It provides three main public functions:
+
+### `fit(X, y)`
+
+Trains the regression model using the supplied feature matrix and target vector.
+
+```cpp
+void fit(
+    const std::vector<std::vector<double>>& X,
+    const std::vector<double>& y
+);
+```
+
+### `predict(features)`
+
+Uses the learned coefficients to predict an output for a new observation.
+
+```cpp
+double predict(
+    const std::vector<double>& features
+) const;
+```
+
+### `get_coefficients()`
+
+Returns the coefficients calculated during training.
+
+```cpp
+std::vector<double> get_coefficients() const;
+```
+
+## 6. Example Usage
+
+The following example demonstrates how to train the regression model and make a prediction.
+
+```cpp
+#include "machine_learning_1/closed_form.hpp"
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<std::vector<double>> X = {
+        {1, 2}, {2, 1}, {3, 4}, {4, 3}, {5, 5}
+    };
+
+    std::vector<double> y = {50, 55, 80, 85, 100};
+
+    // Create and train the model
+    ClosedFormRegression model;
+    model.fit(X, y);
+
+    // Predict for a new observation
+    double result = model.predict({6, 4});
+
+    std::cout << "Prediction: " << result << std::endl;
+
+    return 0;
+}
+```
+
+The model learns its coefficients from the training data and uses them to predict the output for the new observation.
+
+## 7. Compilation and Execution
+
+The module can be compiled using a C++17-compatible compiler.
+
+From the project root directory, compile the example using:
+
+```bash
+g++ -std=c++17 -I include src/closed_form.cpp examples/closed_form_example.cpp -o closed_form_example
+```
+
+Run the executable:
+
+```bash
+./closed_form_example
+```
+
+On Windows PowerShell, use:
+
+```powershell
+.\closed_form_example.exe
+```
+
+## 8. Testing
+
+The module includes a test file:
+
+```text
+tests/test_closed_form.cpp
+```
+
+Compile the tests:
+
+```bash
+g++ -std=c++17 -I include src/closed_form.cpp tests/test_closed_form.cpp -o test_closed_form
+```
+
+Run the tests:
+
+```bash
+./test_closed_form
+```
+
+On Windows PowerShell:
+
+```powershell
+.\test_closed_form.exe
+```
+
+### Tests performed
+
+The implementation is tested for:
+
+1. Correct calculation of regression coefficients.
+2. Correct prediction using the learned coefficients.
+3. Rejection of observations with an incorrect number of features.
+4. Rejection of empty training data.
+
+**All four tests passed during local testing.**
+
+## 9. Limitations
+
+- The model predicts numerical outputs and is therefore intended for regression tasks.
+- The normal equations can be numerically less stable than alternatives such as QR decomposition.
+- Singular matrices are rejected because they do not produce a unique solution through the implemented method.
+- The model does not automatically scale input features or restrict predictions to a particular range.
+
+## 10. Conclusion
+
+The Closed-Form Multiple Linear Regression module provides a C++ implementation of a regression algorithm that calculates its coefficients using the normal equations.
+
+By combining matrix operations, Gaussian elimination, and object-oriented programming, the module provides functionality for training a regression model, retrieving its coefficients, and predicting numerical outputs for new observations.
