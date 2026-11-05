@@ -18,7 +18,7 @@ namespace LinearRegression{
         size_t m = x.size(); // Number of data samples
 
         if (m == 0) {
-            return weights;
+            throw invalid_argument("Training data cannot be empty.");
         }
 
         if (y.size() != m) {
