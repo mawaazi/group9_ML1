@@ -289,7 +289,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 * **Week 2 Progress Report:** AI Clause logged in `reports/week-02.md`.
 * **Week 3 Progress Report:** AI Clause logged in `reports/week-03.md`.
 * **Week 4 Progress Report:** AI Clause logged in `reports/week-04.md`.
-* **Final Submission Summary:** Gemini AI was utilized to assist in troubleshooting CMake generator flags, configuring CTest targets, and structuring the markdown reports. Most core mathematical logic, C++ implementations, and architectural decisions were authored, tested, and verified directly by the group members.
+* **Final Submission Summary:** Gemini AI was utilized to assist in troubleshooting CMake generator flags, configuring CTest targets, and structuring the markdown reports. Most core mathematical logic, C++ implementations, and architectural decisions were authored, tested, and verified directly by the group memberss.
 
 ---
 
