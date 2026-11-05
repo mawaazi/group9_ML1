@@ -5,6 +5,7 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 ---
 
 ## Table of Contents
+- [Contributions by Group Members](#contributions-by-group-members)
 - [Project Name and Description](#project-name-and-description)
 - [Project Objectives](#project-objectives)
 - [Main Features](#main-features)
@@ -19,9 +20,22 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 - [Limitations](#limitations)
 - [References](#references)
 - [AI Clause for Entire project](#ai-clause-for-entire-project)
-- [Contributions by Group Members](#contributions-by-group-members)
-- [Commit History Proof of contribution](#commit-history-proof-of-contribution)
+- [Proof of contribution](#proof-of-contribution)
 
+---
+## Contributions by Group Members
+
+| Member Name | Assigned Modules / Key Tasks |
+| :--- | :--- |
+| **Mawaazi Abdulrahman** | Project Lead / `TrainTestSplit` & `StatisticalSignificance` modules / Unified CMake & CTest architecture / Weekly & General Reports |
+| **Chelangat Faith** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
+| **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
+| **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
+| **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
+| **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
+| **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
+
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Project Name and Description
@@ -307,21 +321,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 Back to [Table of Contents](#table-of-contents)
 ---
 
-## Contributions by Group Members
-
-| Member Name | Assigned Modules / Key Tasks |
-| :--- | :--- |
-| **Mawaazi Abdulrahman** | Project Lead / `TrainTestSplit` & `StatisticalSignificance` modules / Unified CMake & CTest architecture / Weekly & General Reports |
-| **Chelangat Faith** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
-| **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
-| **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
-| **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
-| **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
-| **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
-
-Back to [Table of Contents](#table-of-contents)
----
-## Commit History Proof of Contribution
+## Proof of Contribution
 
 You can view individual member commits on our official GitHub Repository:
 * View contributions by **Mawaazi Abdulrahman**: [Commits by mawaazi](https://github.com/mawaazi/group9_ML1/commits/main?author=mawaazi&before=c522143e4e564744434ec8f4f80bf46a6b09cb4a+35)
