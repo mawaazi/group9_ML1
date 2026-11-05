@@ -43,7 +43,6 @@ Back to [Table of Contents](#table-of-contents)
 This project provides a portable, modular C++23 machine learning library focused on single and multiple linear regression algorithms. Built completely from first principles without external linear algebra libraries, it encapsulates numerical optimization, data sampling (SMOTE), statistical significance validation, and evaluation metrics behind a clean public API.
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Project Objectives
 
@@ -53,7 +52,6 @@ Back to [Table of Contents](#table-of-contents)
 4. **Error Handling & Type Safety:** Enforce compile-time type validation (`std::is_floating_point_v`) and runtime exception safety against invalid datasets (`NaN`, `Inf`, zero variance).
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Main Features
 
@@ -70,7 +68,6 @@ Back to [Table of Contents](#table-of-contents)
 - **Command-Line Applications:** Executable files with preset datasets to evaluate our models.
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Project Structure
 
@@ -144,7 +141,6 @@ group9_ML1/
 ```
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## OOP Concepts Used in Our Library
 
@@ -164,7 +160,6 @@ To ensure DRY (Don't Repeat Yourself) compliance, validation routines live in `s
 * `check_non_zero_variance(v)`: Guards against divide-by-zero errors when total sum of squares ($SS_{tot}$) is zero.
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## An overview of the library
 
@@ -183,7 +178,6 @@ Back to [Table of Contents](#table-of-contents)
 | **Multiple Regression** | `MultipleLinearRegression::fit(...)` | Extension to multi-feature continuous regression. |
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Requirements and Dependencies
 
@@ -193,7 +187,6 @@ Back to [Table of Contents](#table-of-contents)
 - **External Dependencies:** None. Standard C++ Library only (`std::vector`, `std::cmath`, `std::concepts`).
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Installation or Build Instructions
 
@@ -220,7 +213,6 @@ After building, run any test or example .exe file (check the build folder):
 .\build\test_line_of_best_fit.exe
 ```
 Back to [Table of Contents](#table-of-contents)
----
 
 ## How to Use the Library
 
@@ -252,7 +244,6 @@ int main() {
 }
 ```
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Examples
 
@@ -267,7 +258,6 @@ Pre-built executable examples demonstrating modular features are located in the 
    .\build\significance_example.exe
    ```
 Back to [Table of Contents](#table-of-contents)
----
 
 ## How to Run the Tests
 
@@ -285,7 +275,6 @@ Or run individual test binaries directly:
 .\build\test_statistical_significance.exe
 ```
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Limitations
 
@@ -294,7 +283,6 @@ Back to [Table of Contents](#table-of-contents)
 3. **Feature Scaling Requirement:** Gradient Descent variants (Batch GD & SGD) require standardized feature scaling to guarantee optimal convergence rates.
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## References
 
@@ -305,7 +293,6 @@ Back to [Table of Contents](#table-of-contents)
 5. ISO/IEC 14882:2023, *Information technology — Programming languages — C++*, 2023.
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## AI Clause for Entire Project
 
@@ -318,7 +305,6 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 * **Final Submission Summary:** Gemini AI was utilized to assist in troubleshooting CMake generator flags, configuring CTest targets, and structuring the markdown reports. Most core mathematical logic, C++ implementations, and architectural decisions were authored, tested, and verified directly by the group memberss.
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Proof of Contribution
 
