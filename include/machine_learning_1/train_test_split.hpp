@@ -2,10 +2,10 @@
 #define TRAIN_TEST_SPLIT_HPP_INCLUDED
 
 #include <vector>
-#include <utility>
-#include <concepts>
-#include <stdexcept>
-#include <cstddef>
+#include <utility> //Provides std::pair<T1, T2>, required by splitPaired() to return a pair of SplitResult structs (X split and y split) in a single unified return value
+#include <concepts> //Provides C++20/C++23 fundamental language concepts (std::integral, std::floating_point) to constrain template parameters at compile time.
+#include <stdexcept> //Provides std::invalid_argument and std::out_of_range exception classes for runtime input validation.
+#include <cstddef> //Provides std::size_t, ensuring portable, architecture-independent integer types for array indexing and memory allocations.
 
 namespace ml_library {
     
@@ -27,7 +27,7 @@ namespace ml_library {
             /// @param data the complete input dataset
             /// @param test_ratio fraction of data reserrved for testing e.g 0.2 for 20%
             /// @param seed he optional random seed for reproducible shuffling
-            /// @return SplitResult containing train aand test vectors
+            /// @return SplitResult(struct) containing train aand test vectors
             template <Numeric T>
             static SplitResult<T> split(const std::vector<T>& data, double test_ratio, unsigned int seed = 42);
             
