@@ -45,7 +45,7 @@ try{
 
     if(fabs(result[0] - 1)<0.25 &&
     fabs(result[1] - 2) <0.25 &&
-    fabs(result[2] - 3<0.25 )){
+    fabs(result[2] - 3) < 0.25){
         cout << "Multiple regression: PASS \n";
         passed ++;
     }else {
