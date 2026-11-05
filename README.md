@@ -1,5 +1,4 @@
-# Machine Learning 1: Linear Regression C++ Library (Group 9)
-
+# Group 9 Machine Learning 1: Linear Regression from Scratch. A C++ Library.
 A lightweight, modern C++23 library implementing **Linear Regression from scratch**, complete with mathematical statistics, optimization algorithms, data sampling tools, automated testing, and executable test and example files for each model once the library is built.
 
 ---
@@ -36,7 +35,6 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
 
 Back to [Table of Contents](#table-of-contents)
----
 
 ## Project Name and Description
 
