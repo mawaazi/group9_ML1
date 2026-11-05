@@ -298,7 +298,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 | Member Name | Assigned Modules / Key Tasks |
 | :--- | :--- |
 | **Mawaazi Abdulrahman** | Project Lead / `TrainTestSplit` & `StatisticalSignificance` modules / Unified CMake & CTest architecture / Weekly & General Reports |
-| **[MEMBER 2 NAME]** | Line of Best Fit (`best_fit.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
+| **Chelangat Faith** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
 | **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
 | **[MEMBER 4 NAME]** | Pearson Correlation (`correlation_coefficient.hpp`) & $R^2$ Determination (`coefficient_of_determination.h`) |
 | **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
@@ -312,9 +312,9 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 ## Commit History Proof of Contribution
 
 You can view individual member commits on our official GitHub Repository:
-* View contributions by **Mawaazi Abdulrahman**: [Commits by mawaazi](https://github.com/mawaazi/group9_ML1/commits/main?author=mawaazi&before=c522143e4e564744434ec8f4f80bf46a6b09cb4a+35)
-* View contributions by **[MEMBER 2]**: [Commits by MEMBER 2](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/mawaazi/group9_ML1/commits/NAKYOBE_GEOGIN_MARTHA?author=geo2104)
+* View contributions by **Mawaazi Abdulrahman**: [Commits by mawaazi](https://github.com/mawaazi/group9_ML1/commits/main?author=<abdulrahmanmawaazi@gmail.com>)
+* View contributions by **Chelangat Faith**: [Commits by chela](ttps://github.com/mawaazi/group9_ML1/commits/main/?author=<fchelangat535@gmail.com>)
+* View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/mawaazi/group9_ML1/commits/main?author=<marthageogin@gmail.com>)
 * View contributions by **[MEMBER 4]**: [Commits by MEMBER 4](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
 * View contributions by **[MEMBER 5]**: [Commits by MEMBER 5](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
 * View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
