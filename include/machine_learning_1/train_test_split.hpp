@@ -20,7 +20,7 @@ namespace ml_library {
         std::vector<T> test_data;
     };
 
-    //this class splits datasets into training and testing subsets
+    //this stateless class splits datasets into training and testing subsets
     class TrainTestSplitter {
         public:
             //splits a single dataset vector into train and test subsets
