@@ -9,13 +9,18 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 - [Project Objectives](#project-objectives)
 - [Main Features](#main-features)
 - [Project Structure](#project-structure)
+- [Some OOP Concepts Used In Our Library](#some-oop-concepts-used-in-our-library)
+- [An overview of the Library](#an-overview-of-the-library)
 - [Requirements and Dependencies](#requirements-and-dependencies)
 - [Installation / Build Instructions](#installation--build-instructions)
 - [How to Use the Library](#how-to-use-the-library)
 - [Examples](#examples)
 - [How to Run the Tests](#how-to-run-the-tests)
 - [Limitations](#limitations)
+- [References](#references)
+- [AI Clause for Entire project](#ai-clause-for-entire-project)
 - [Contributions by Group Members](#contributions-by-group-members)
+- [Commit History Proof of contribution](#commit-history-proof-of-contribution)
 
 ---
 
