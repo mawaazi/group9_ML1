@@ -2,7 +2,7 @@
 #include <vector>
 #include <cassert>
 #include <string>
-#include "ml_library/train_test_split.hpp"
+#include "machine_learning_1/train_test_split.hpp"
 
 void testSplitWithDifferentTypes(){
     //testing with float and short to prove universsal numerical support

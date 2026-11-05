@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "ml_library/statistical_significance.hpp"
+#include "machine_learning_1/statistical_significance.hpp"
 
 int main() {
     std::cout << "========================================\n";
