@@ -314,7 +314,7 @@ Back to [Table of Contents](#table-of-contents)
 | **Mawaazi Abdulrahman** | Project Lead / `TrainTestSplit` & `StatisticalSignificance` modules / Unified CMake & CTest architecture / Weekly & General Reports |
 | **Chelangat Faith** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
 | **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
-| **[MEMBER 4 NAME]** | Pearson Correlation (`correlation_coefficient.hpp`) & $R^2$ Determination (`coefficient_of_determination.h`) |
+| **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
 | **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
 | **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
