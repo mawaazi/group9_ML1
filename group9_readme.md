@@ -308,7 +308,6 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 | **[MEMBER 9 NAME]** | Interactive Console App (`ml1_app`), User Interface, & Problem Catalog |
 
 ---
-
 ## Commit History Proof of Contribution
 
 You can view individual member commits on our official GitHub Repository:
