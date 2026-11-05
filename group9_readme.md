@@ -299,7 +299,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 | :--- | :--- |
 | **Mawaazi Abdulrahman** | Project Lead / `TrainTestSplit` & `StatisticalSignificance` modules / Unified CMake & CTest architecture / Weekly & General Reports |
 | **[MEMBER 2 NAME]** | Line of Best Fit (`best_fit.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
-| **[MEMBER 3 NAME]** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
+| **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
 | **[MEMBER 4 NAME]** | Pearson Correlation (`correlation_coefficient.hpp`) & $R^2$ Determination (`coefficient_of_determination.h`) |
 | **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
 | **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
@@ -314,7 +314,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 You can view individual member commits on our official GitHub Repository:
 * View contributions by **Mawaazi Abdulrahman Shihubbi**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[YOUR-USERNAME]`
 * View contributions by **[MEMBER 2]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
-* View contributions by **[MEMBER 3]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
+* View contributions by **Nakyobe Geogin Martha**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=geo2104`
 * View contributions by **[MEMBER 4]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
 * View contributions by **[MEMBER 5]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
 * View contributions by **[MEMBER 6]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
