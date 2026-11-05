@@ -29,6 +29,10 @@ const vector<double>& coefficients
     //coefficients[1...]= feature coefficients
     size_t p = coefficients.size();
 
+    if (coefficients.empty()) {
+        throw invalid_argument("Coefficients cannot be empty.");
+    }
+
     //X must contain p-1 features
     size_t numberOfFeatures = p-1;
 
