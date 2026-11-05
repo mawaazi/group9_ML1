@@ -10,12 +10,13 @@ void testSplitWithDifferentTypes(){
     std::vector<short> targets = {10, 20, 30, 40, 50, 60};
 
     auto[train_res, test_res] = ml_library::TrainTestSplitter::splitPaired(features, targets, 0.33, 123);
-    assert(train_res.train_data.size() + test_res.train_data.size() == 6);
+    assert(train_res.train_data.size() + train_res.test_data.size() == 6);
+    assert(test_res.train_data.size() + test_res.test_data.size() == 6);
     std::cout << "[PASS] Milti-type numerical concept test passed successfully! \n";
 }
     int main(){
         std::cout << "Runnning train/test Split test Suite... \n";
-        testSplitWithDifferentTypes;
+        testSplitWithDifferentTypes();
         std::cout << "All train/test split tests passed! \n";
         return 0; 
 }
