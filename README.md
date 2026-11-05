@@ -1,7 +1,7 @@
 # Group 9 ML1: Linear Regression from Scratch. A C++ Library.
 A lightweight, modern C++23 library implementing **Linear Regression from scratch**, complete with mathematical statistics, optimization algorithms, data sampling tools, automated testing, and executable test and example files for each model once the library is built.
 
-[GitHub repo](https://github.com/mawaazi/group9_ML1)
+[Our GitHub repo](https://github.com/mawaazi/group9_ML1)
 
 ## Table of Contents
 - [Contributions by Group Members](#contributions-by-group-members)
@@ -70,7 +70,7 @@ Back to [Table of Contents](#table-of-contents)
 
 ## Project Structure
 
-[GitHub repo](https://github.com/mawaazi/group9_ML1)
+[Our GitHub repo](https://github.com/mawaazi/group9_ML1)
 
 ```text
 group9_ML1/
