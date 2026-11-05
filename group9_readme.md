@@ -12,7 +12,7 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 - [Some OOP Concepts Used In Our Library](#some-oop-concepts-used-in-our-library)
 - [An overview of the Library](#an-overview-of-the-library)
 - [Requirements and Dependencies](#requirements-and-dependencies)
-- [Installation / Build Instructions](#installation--build-instructions)
+- [Installation or Build Instructions](#installation-or-build-instructions)
 - [How to Use the Library](#how-to-use-the-library)
 - [Examples](#examples)
 - [How to Run the Tests](#how-to-run-the-tests)
@@ -182,7 +182,7 @@ Back to [Table of Contents](#table-of-contents)
 Back to [Table of Contents](#table-of-contents)
 ---
 
-## Installation / Build Instructions
+## Installation or Build Instructions
 
 ### 1. Build the Library and executable files for tests and examples.
 
