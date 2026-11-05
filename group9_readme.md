@@ -314,7 +314,7 @@ Back to [Table of Contents](#table-of-contents)
 | **Mawaazi Abdulrahman** | Project Lead / `TrainTestSplit` & `StatisticalSignificance` modules / Unified CMake & CTest architecture / Weekly & General Reports |
 | **Chelangat Faith** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
 | **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
-| **[MEMBER 4 NAME]** | Pearson Correlation (`correlation_coefficient.hpp`) & $R^2$ Determination (`coefficient_of_determination.h`) |
+| **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
 | **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
 | **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
@@ -329,7 +329,7 @@ You can view individual member commits on our official GitHub Repository:
 * View contributions by **Mawaazi Abdulrahman**: [Commits by mawaazi](https://github.com/mawaazi/group9_ML1/commits/main?author=mawaazi&before=c522143e4e564744434ec8f4f80bf46a6b09cb4a+35)
 * View contributions by **Chelangat Faith**: [Commits by chela](https://github.com/mawaazi/group9_ML1/commits/main?author=Chelangat-faith)
 * View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/mawaazi/group9_ML1/commits/main?author=geo2104)
-* View contributions by **[MEMBER 4]**: [Commits by MEMBER 4](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+* View contributions by **Nantongo Melanie**: [Commits by melanie](https://github.com/mawaazi/group9_ML1/commits/main?author=nmelanie-ui)
 * View contributions by **[MEMBER 5]**: [Commits by MEMBER 5](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 * View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 * View contributions by **[MEMBER 7]**: [Commits by MEMBER 7](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
