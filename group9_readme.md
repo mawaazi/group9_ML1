@@ -9,13 +9,18 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 - [Project Objectives](#project-objectives)
 - [Main Features](#main-features)
 - [Project Structure](#project-structure)
+- [Some OOP Concepts Used In Our Library](#some-oop-concepts-used-in-our-library)
+- [An overview of the Library](#an-overview-of-the-library)
 - [Requirements and Dependencies](#requirements-and-dependencies)
-- [Installation / Build Instructions](#installation--build-instructions)
+- [Installation or Build Instructions](#installation-or-build-instructions)
 - [How to Use the Library](#how-to-use-the-library)
 - [Examples](#examples)
 - [How to Run the Tests](#how-to-run-the-tests)
 - [Limitations](#limitations)
+- [References](#references)
+- [AI Clause for Entire project](#ai-clause-for-entire-project)
 - [Contributions by Group Members](#contributions-by-group-members)
+- [Commit History Proof of contribution](#commit-history-proof-of-contribution)
 
 ---
 
@@ -25,6 +30,7 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 
 This project provides a portable, modular C++23 machine learning library focused on single and multiple linear regression algorithms. Built completely from first principles without external linear algebra libraries, it encapsulates numerical optimization, data sampling (SMOTE), statistical significance validation, and evaluation metrics behind a clean public API.
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Project Objectives
@@ -34,6 +40,7 @@ This project provides a portable, modular C++23 machine learning library focused
 3. **Automated Testing & Build Automation:** Maintain a unified `CMakeLists.txt` build system integrated with CTest for test execution.
 4. **Error Handling & Type Safety:** Enforce compile-time type validation (`std::is_floating_point_v`) and runtime exception safety against invalid datasets (`NaN`, `Inf`, zero variance).
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Main Features
@@ -50,6 +57,7 @@ This project provides a portable, modular C++23 machine learning library focused
   - Synthetic Minority Over-sampling Technique (SMOTE) for imbalanced data handling
 - **Command-Line Applications:** Executable files with preset datasets to evaluate our models.
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Project Structure
@@ -121,8 +129,8 @@ group9_ML1/
     ├── week-03.md
     ├── week-04.md
     └── General_report.md
-```
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## OOP Concepts Used in Our Library
@@ -142,6 +150,7 @@ To ensure DRY (Don't Repeat Yourself) compliance, validation routines live in `s
 * `check_finite_values(v)`: Uses `std::isfinite` to trap `NaN` and `Inf` inputs early.
 * `check_non_zero_variance(v)`: Guards against divide-by-zero errors when total sum of squares ($SS_{tot}$) is zero.
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## An overview of the library
@@ -160,6 +169,7 @@ To ensure DRY (Don't Repeat Yourself) compliance, validation routines live in `s
 | **SMOTE Overfitting** | `applySMOTE(...)` | Synthetic Minority Over-sampling Technique to balance skewed training data. |
 | **Multiple Regression** | `MultipleLinearRegression::fit(...)` | Extension to multi-feature continuous regression. |
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Requirements and Dependencies
@@ -169,9 +179,10 @@ To ensure DRY (Don't Repeat Yourself) compliance, validation routines live in `s
 - **Generator:** `MinGW Makefiles` (Windows) or standard Unix Makefiles (macOS/Linux).
 - **External Dependencies:** None. Standard C++ Library only (`std::vector`, `std::cmath`, `std::concepts`).
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
-## Installation / Build Instructions
+## Installation or Build Instructions
 
 ### 1. Build the Library and executable files for tests and examples.
 
@@ -195,7 +206,7 @@ After building, run any test or example .exe file (check the build folder):
 ```powershell
 .\build\test_line_of_best_fit.exe
 ```
-
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## How to Use the Library
@@ -227,7 +238,7 @@ int main() {
     return 0;
 }
 ```
-
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Examples
@@ -242,7 +253,7 @@ Pre-built executable examples demonstrating modular features are located in the 
    ```powershell
    .\build\significance_example.exe
    ```
-
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## How to Run the Tests
@@ -260,7 +271,7 @@ Or run individual test binaries directly:
 .\build\test_train_test_split.exe
 .\build\test_statistical_significance.exe
 ```
-
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Limitations
@@ -269,6 +280,7 @@ Or run individual test binaries directly:
 2. **Multicollinearity in Normal Equations:** High correlation between feature columns can render $(X^T X)$ singular during matrix inversion. Gradient Descent should be used for collinear datasets.
 3. **Feature Scaling Requirement:** Gradient Descent variants (Batch GD & SGD) require standardized feature scaling to guarantee optimal convergence rates.
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## References
@@ -279,6 +291,7 @@ Or run individual test binaries directly:
 4. N. V. Chawla et al., "SMOTE: Synthetic Minority Over-sampling Technique," *Journal of Artificial Intelligence Research*, vol. 16, pp. 321–357, 2002.
 5. ISO/IEC 14882:2023, *Information technology — Programming languages — C++*, 2023.
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## AI Clause for Entire Project
@@ -291,6 +304,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 * **Week 4 Progress Report:** AI Clause logged in `reports/week-04.md`.
 * **Final Submission Summary:** Gemini AI was utilized to assist in troubleshooting CMake generator flags, configuring CTest targets, and structuring the markdown reports. Most core mathematical logic, C++ implementations, and architectural decisions were authored, tested, and verified directly by the group memberss.
 
+Back to [Table of Contents](#table-of-contents)
 ---
 
 ## Contributions by Group Members
@@ -298,37 +312,28 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 | Member Name | Assigned Modules / Key Tasks |
 | :--- | :--- |
 | **Mawaazi Abdulrahman** | Project Lead / `TrainTestSplit` & `StatisticalSignificance` modules / Unified CMake & CTest architecture / Weekly & General Reports |
-| **CHELANGAT FAITH** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
-| **[MEMBER 3 NAME]** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
-| **[MEMBER 2 NAME]** | Line of Best Fit (`best_fit.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
+| **Chelangat Faith** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
 | **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
-| **[MEMBER 4 NAME]** | Pearson Correlation (`correlation_coefficient.hpp`) & $R^2$ Determination (`coefficient_of_determination.h`) |
+| **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
 | **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
 | **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
 | **[MEMBER 8 NAME]** | Error Hierarchy System (`ml_error.hpp`) & Internal Validators (`input_checks.hpp`) |
 | **[MEMBER 9 NAME]** | Interactive Console App (`ml1_app`), User Interface, & Problem Catalog |
 
+Back to [Table of Contents](#table-of-contents)
 ---
-
 ## Commit History Proof of Contribution
 
 You can view individual member commits on our official GitHub Repository:
-* View contributions by **Mawaazi Abdulrahman Shihubbi**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[YOUR-USERNAME]`
-* View contributions by **CHELANGAT FAITH**: `https://github.com/mawaazi/group9_ML1/commits/faith`
-* View contributions by **[MEMBER 3]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
-* View contributions by **[MEMBER 4]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
-* View contributions by **[MEMBER 5]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
-* View contributions by **[MEMBER 6]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
-* View contributions by **[MEMBER 7]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
-* View contributions by **[MEMBER 8]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
-* View contributions by **[MEMBER 9]**: `https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME]`
 * View contributions by **Mawaazi Abdulrahman**: [Commits by mawaazi](https://github.com/mawaazi/group9_ML1/commits/main?author=mawaazi&before=c522143e4e564744434ec8f4f80bf46a6b09cb4a+35)
-* View contributions by **[MEMBER 2]**: [Commits by MEMBER 2](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=geo2104)
-* View contributions by **[MEMBER 4]**: [Commits by MEMBER 4](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **[MEMBER 5]**: [Commits by MEMBER 5](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **[MEMBER 7]**: [Commits by MEMBER 7](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **[MEMBER 8]**: [Commits by MEMBER 8](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **[MEMBER 9]**: [Commits by MEMBER 9](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
+* View contributions by **Chelangat Faith**: [Commits by chela](https://github.com/mawaazi/group9_ML1/commits/main?author=Chelangat-faith)
+* View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/mawaazi/group9_ML1/commits/main?author=geo2104)
+* View contributions by **Nantongo Melanie**: [Commits by melanie](https://github.com/mawaazi/group9_ML1/commits/main?author=nmelanie-ui)
+* View contributions by **[MEMBER 5]**: [Commits by MEMBER 5](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+* View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+* View contributions by **[MEMBER 7]**: [Commits by MEMBER 7](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+* View contributions by **[MEMBER 8]**: [Commits by MEMBER 8](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+* View contributions by **[MEMBER 9]**: [Commits by MEMBER 9](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+
+Back to [Table of Contents](#table-of-contents)
