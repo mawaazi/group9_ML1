@@ -17,7 +17,7 @@ const vector<double>& coefficients
     //check that data is there
     if(n==0){
         throw invalid_argument("Training data cannot be empty.");
-    };
+    }
     
     //check that X and y have the same number of samples
     if(y.size()!=n){
@@ -49,6 +49,10 @@ const vector<double>& coefficients
     // n must be greater than p.
     if (n<=p){
         throw invalid_argument("Not enough observations to calculate standard error of estimation.");
+    }
+
+    if (coefficients.empty()) {
+    throw invalid_argument("Coefficients cannot be empty.");
     }
 
     //Calculate the sum of squared errors (SSE)
