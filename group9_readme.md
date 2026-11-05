@@ -318,8 +318,6 @@ Back to [Table of Contents](#table-of-contents)
 | **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
 | **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
-| **[MEMBER 8 NAME]** | Error Hierarchy System (`ml_error.hpp`) & Internal Validators (`input_checks.hpp`) |
-| **[MEMBER 9 NAME]** | Interactive Console App (`ml1_app`), User Interface, & Problem Catalog |
 
 Back to [Table of Contents](#table-of-contents)
 ---
@@ -333,7 +331,5 @@ You can view individual member commits on our official GitHub Repository:
 * View contributions by **[MEMBER 5]**: [Commits by MEMBER 5](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 * View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 * View contributions by **[MEMBER 7]**: [Commits by MEMBER 7](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
-* View contributions by **[MEMBER 8]**: [Commits by MEMBER 8](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
-* View contributions by **[MEMBER 9]**: [Commits by MEMBER 9](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 
 Back to [Table of Contents](#table-of-contents)
