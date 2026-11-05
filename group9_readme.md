@@ -314,7 +314,7 @@ In accordance with the project guidelines, AI tools were utilized solely as supp
 You can view individual member commits on our official GitHub Repository:
 * View contributions by **Mawaazi Abdulrahman**: [Commits by mawaazi](https://github.com/mawaazi/group9_ML1/commits/main?author=mawaazi&before=c522143e4e564744434ec8f4f80bf46a6b09cb4a+35)
 * View contributions by **[MEMBER 2]**: [Commits by MEMBER 2](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
-* View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=geo2104)
+* View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/mawaazi/group9_ML1/commits/NAKYOBE_GEOGIN_MARTHA?author=geo2104)
 * View contributions by **[MEMBER 4]**: [Commits by MEMBER 4](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
 * View contributions by **[MEMBER 5]**: [Commits by MEMBER 5](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
 * View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main/?author=[USERNAME])
