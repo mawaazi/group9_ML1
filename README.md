@@ -33,9 +33,6 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 | **TABASANG PERRY AKOHNI** | Pearson Correlation Coefficient (`correlation_coefficient.hpp`, `correlation_coefficient.cpp`), Testing & Documentation |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
 
-| **Perry Akohni** | Pearson Correlation Coefficient (`correlation_coefficient.hpp`, `correlation_coefficient.cpp`), Testing & Documentation |
-
-
 Back to [Table of Contents](#table-of-contents)
 
 ## Project Name and Description
