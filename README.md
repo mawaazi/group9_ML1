@@ -29,7 +29,7 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 | **Chelangat Faith** | Standard Error Estimation (`standard_error_estimation.hpp`) & Closed Form matrix equations (`closed_form.hpp`) |
 | **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
 | **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
-| **[MEMBER 5 NAME]** | Standard Error of Estimation & Prediction Intervals (`standard_error.hpp`) |
+| **Borit Derrick Siwa** | Coefficient of Determination (R²) & Overcoming Overfitting using SMOTE data resampling (`coefficient_of_determination.h`, `smote.hpp`) |
 | **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
 
