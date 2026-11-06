@@ -1,6 +1,6 @@
 #include "machine_learning_1/prediction_interval.hpp"
 #include <cmath>
-
+#include <stdexcept>
 PredictionBounds calculatePredictionInterval(
     double new_x,
     const std::vector<double>& x_data,
@@ -11,7 +11,10 @@ PredictionBounds calculatePredictionInterval(
 )
 {
     int n = x_data.size();
-    if (n<= 2) return {0.0, 0.0, 0.0}; // Not enough data points to calculate prediction interval
+    int n = x_data.size();
+if (n <= 2 || n != static_cast<int>(y_data.size())) {
+    throw std::invalid_argument("Need at least 3 points and equal-sized x and y vectors.");
+}
 
     double sum_x = 0.0;
     for (double x : x_data) sum_x += x;
@@ -21,6 +24,9 @@ PredictionBounds calculatePredictionInterval(
     for (double x : x_data) {
         ss_x += (x - mean_x) * (x - mean_x);
     }
+    if (ss_x == 0.0) {
+    throw std::runtime_error("All x values are identical (zero variance).");
+}
     
     double sse =0.0;
     for (int i = 0; i < n; ++i) {
