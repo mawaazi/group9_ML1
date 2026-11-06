@@ -17,7 +17,7 @@ int main(){
     // TEST 1: Standard Calculation
     vector<double> x = {1.0, 2.0, 3.0, 4.0, 5.0};
     vector<double> y = {2.0, 4.0, 5.0, 4.0, 5.0}; // Perfect linear relationship: y = 2x
-    double new_x = 0.6; // From previous best fit calculation
+    double new_x = 6.0;   // x value we want a prediction for
     double slope = 0.6;
     double intercept = 2.2;
     double t_value = 3.182; // Approximate t-value for 95% confidence with 3 degrees of freedom
