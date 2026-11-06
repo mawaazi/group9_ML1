@@ -11,7 +11,6 @@ PredictionBounds calculatePredictionInterval(
 )
 {
     int n = x_data.size();
-    int n = x_data.size();
 if (n <= 2 || n != static_cast<int>(y_data.size())) {
     throw std::invalid_argument("Need at least 3 points and equal-sized x and y vectors.");
 }
