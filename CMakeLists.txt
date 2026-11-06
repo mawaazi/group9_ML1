@@ -18,9 +18,7 @@ set(LIBRARY_SOURCES
     src/best_fit.cpp
     src/closed_form.cpp
     src/gradient_descent.cpp
-    src/correlation_coefficient.cpp
-    src/main.cpp 
-    src/ml_pipeline.cpp 
+    src/correlation_coefficient.cpp 
     src/prediction_interval.cpp
     src/standard_error_estimation.cpp 
     src/stochastic_gradient_descent.cpp  
@@ -41,6 +39,7 @@ endmacro()
 
 #registeering group tests
 add_ml_test(test_closed_form tests/test_closed_form.cpp)
+add_ml_test(test_prediction_interval tests/test_prediction_interval.cpp)
 add_ml_test(test_correlation_coefficient tests/test_correlation_coefficient.cpp)
 add_ml_test(test_gradient_descent tests/test_gradient_descent.cpp)
 add_ml_test(test_line_of_best_fit tests/test_line_of_best_fit.cpp)
@@ -70,6 +69,8 @@ add_ml_example(example_gradient_descent examples/gradient_descent_example.cpp)
 add_ml_example(example_significance examples/significance_example.cpp)
 add_ml_example(example_standard_error_est examples/standard_error_estimation.cpp)
 add_ml_example(example_standard_error examples/standard_error_example.cpp)
+add_ml_example(example_best_fit examples/best_fit_example.cpp)
+add_ml_example(example_prediction_interval examples/prediction_interval_example.cpp)
 add_ml_example(example_test_r2 examples/test_r2.cpp)
 add_ml_example(example_train_test_split examples/train_test_split_example.cpp)
 add_ml_example(example_correlation examples/correlation_example.cpp)
