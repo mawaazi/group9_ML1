@@ -72,3 +72,4 @@ add_ml_example(example_standard_error_est examples/standard_error_estimation.cpp
 add_ml_example(example_standard_error examples/standard_error_example.cpp)
 add_ml_example(example_test_r2 examples/test_r2.cpp)
 add_ml_example(example_train_test_split examples/train_test_split_example.cpp)
+add_ml_example(example_correlation examples/correlation_example.cpp)
