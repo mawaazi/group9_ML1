@@ -5,7 +5,7 @@ In linear regression, finding a slope (e.g., "for every extra square foot, the h
 
 This module provides a robust C++ implementation to evaluate the statistical significance of a fitted linear regression slope. It calculates the **Standard Error** of the slope and the **t-statistic** to determine if the relationship between the features (`X`) and targets (`y`) is real or merely random noise.
 
-## 2. The Math, Explained from Scratch (No Prior Knowledge Needed)
+## 2. The Math explained
 This module uses the standard Ordinary Least Squares (OLS) formulas. Here is how the code calculates each step, using the exact variable names from `statistical_significance.cpp`.
 
 1.  **`mean_x` and `mean_y` (The Averages)**: 
