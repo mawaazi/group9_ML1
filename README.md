@@ -31,7 +31,7 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 | **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
 | **Borit Derrick Siwa** | Coefficient of Determination (R²) & Overcoming Overfitting using SMOTE data resampling (`coefficient_of_determination.h`, `smote.hpp`) |
 | **TABASANG PERRY AKOHNI** | Pearson Correlation Coefficient (`correlation_coefficient.hpp`, `correlation_coefficient.cpp`), Testing & Documentation |
-| **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
+| **Wesula Francis** | Line of best fit (`best_fit.hpp`,`best_fit.cpp`,`test_line_of_best_fit.cpp`)& Prediction interval (`prediction_interval.hpp`,`prediction_interval.cpp`,`test_prediction_interval.cpp`) |
 
 Back to [Table of Contents](#table-of-contents)
 
