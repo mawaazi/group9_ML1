@@ -3,9 +3,9 @@
 #include "machine_learning_1/statistical_significance.hpp"
 
 int main() {
-    std::cout << "========================================\n";
+    std::cout << "\n";
     std::cout << " STATISTICAL SIGNIFICANCE EXAMPLE\n";
-    std::cout << "========================================\n\n";
+    std::cout << "\n\n";
 
     // Sample data: Linear relationship y = 2.5x + 1.0 with minor variations
     std::vector<double> x = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0};

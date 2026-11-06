@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <cassert>
+#include <cassert> // assert() macro crashes the program if a condition is not met
 #include <stdexcept>
 #include "machine_learning_1/statistical_significance.hpp"
 
@@ -26,9 +26,9 @@ void testSlopeSignificance() {
 }
 
 int main() {
-    std::cout << "========================================\n";
+    std::cout << "\n";
     std::cout << " STATISTICAL SIGNIFICANCE TEST SUITE\n";
-    std::cout << "========================================\n\n";
+    std::cout << "\n\n";
 
     try {
         testSlopeSignificance();

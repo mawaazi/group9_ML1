@@ -1,8 +1,8 @@
-#include "machine_learning_1/statistical_significance.hpp"
-#include <cmath>
-#include <numeric>
-#include <stdexcept>
-#include <cstddef>
+#include "machine_learning_1/statistical_significance.hpp" //importing my header
+#include <cmath> // math functions like std::sqrt
+#include <numeric> // std::accumulate (summation)
+#include <stdexcept> // runtime error handling e.g std::invalid_argument
+#include <cstddef> // for std::size_t
 
 namespace ml_library {
 
@@ -53,9 +53,7 @@ namespace ml_library {
         return {se_slope, t_stat, df, significant};
     }
 
-    // ============================================================================
     // Explicit Template Instantiations
-    // ============================================================================
     template SignificanceResult StatisticalSignificance::evaluateSlopeSignificance(
         const std::vector<double>&, const std::vector<double>&, double);
 
