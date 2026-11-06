@@ -86,9 +86,7 @@ namespace ml_library {
         return {X_split, y_split};
     }
 
-    // ============================================================================
     // Explicit Template Instantiations (Allows .cpp compilation for numbers)
-    // ============================================================================
     template SplitResult<double> TrainTestSplitter::split(const std::vector<double>&, double, unsigned int);
     template SplitResult<float> TrainTestSplitter::split(const std::vector<float>&, double, unsigned int);
     template SplitResult<int> TrainTestSplitter::split(const std::vector<int>&, double, unsigned int);

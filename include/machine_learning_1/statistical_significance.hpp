@@ -1,8 +1,8 @@
 #ifndef ML_LIBRARY_STATISTICAL_SIGNIFICANCE_HPP
 #define ML_LIBRARY_STATISTICAL_SIGNIFICANCE_HPP
 
-#include <vector>
-#include <concepts>
+#include <vector> //vectors to hold datasets
+#include <concepts> // concepts to restrict templates
 
 namespace ml_library {
 

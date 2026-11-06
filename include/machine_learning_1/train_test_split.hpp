@@ -2,10 +2,10 @@
 #define TRAIN_TEST_SPLIT_HPP_INCLUDED
 
 #include <vector>
-#include <utility> //Provides std::pair<T1, T2>, required by splitPaired() to return a pair of SplitResult structs (X split and y split) in a single unified return value
-#include <concepts> //Provides C++20/C++23 fundamental language concepts (std::integral, std::floating_point) to constrain template parameters at compile time.
-#include <stdexcept> //Provides std::invalid_argument and std::out_of_range exception classes for runtime input validation.
-#include <cstddef> //Provides std::size_t, ensuring portable, architecture-independent integer types for array indexing and memory allocations.
+#include <utility> // std::pair<T1, T2>, required by splitPaired()
+#include <concepts> // concepts (std::integral, std::floating_point)
+#include <stdexcept> // std::invalid_argument and std::out_of_range exception classes for runtime input validation
+#include <cstddef> // std::size_t
 
 namespace ml_library {
     
