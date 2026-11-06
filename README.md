@@ -33,6 +33,9 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 | **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
 
+| **Perry Akohni** | Pearson Correlation Coefficient (`correlation_coefficient.hpp`, `correlation_coefficient.cpp`), Testing & Documentation |
+
+
 Back to [Table of Contents](#table-of-contents)
 
 ## Project Name and Description
@@ -317,5 +320,6 @@ You can view individual member commits on our official GitHub Repository:
 * View contributions by **Borit Derrick Siwa**: [Commits by Borit](https://github.com/mawaazi/group9_ML1/commits/main?author=BORITDERRICKSIWA7927)
 * View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 * View contributions by **[MEMBER 7]**: [Commits by MEMBER 7](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+*  View contributions by **Perry Akohni**: [Commits by Perry](https://github.com/mawaazi/group9_ML1/commits/main?author=perryakohni)
 
 Back to [Table of Contents](#table-of-contents)
