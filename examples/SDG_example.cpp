@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <iomanip>
+#include <iomanip>//gives us access to setprecision()
 #include "../include/machine_learning_1/stochastic_gradient_descent.hpp"
 
 using namespace std;
@@ -60,12 +60,10 @@ for (size_t i = 0; i < x.size(); ++i) {
     double predictedY =
         finalWeights[0] + finalWeights[1] * x[i][0];
 
-    cout << "x = " << x[i][0]<< ", actual y = " << y[i]
-         << ", predicted y = " << predictedY << '\n';
+    cout << "x = " << x[i][0]<< ", actual y = " << y[i] << ", predicted y = " << predictedY << '\n';
 }
 
 cout << "\nExpected result: bias close to 2 and weight close to 3.\n";
 
 return 0;
-
 }

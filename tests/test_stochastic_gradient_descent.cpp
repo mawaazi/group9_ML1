@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include<cmath>
+#include<cmath>//allows us to access(fabs())
 #include <stdexcept>
-#include "../include/machine_learning_1/stochastic_gradient_descent.hpp"
+#include "../include/machine_learning_1/stochastic_gradient_descent.hpp"//access to the class
 
 using namespace std;
 
@@ -16,7 +16,7 @@ int main(){
 
     try{
         LinearRegression::StochasticGradientDescent sgd(0.001, 5000);
-        vector<double> result = sgd.optimize(x, y, weights);
+        vector<double> result = sgd.optimize(x, y, weights);//calling optimize function
         cout<< "Bias: "<<result[0]<< ", Weight: "<<result[1]<<endl;
 
         if (fabs(result[0] - 2) < 0.1 && fabs(result[1] - 3) < 0.1) {
@@ -25,17 +25,15 @@ int main(){
     } else{
         cout<< "Simple regression: FAIL \n";
         failed++;
-    }
-    
+    }//tolerance is 1
 }catch(...){
     cout<< "Simple regression: FAIL\n";
-    failed ++;
+    failed ++;//catches any exception thrown inside try block
 }
-
 // Test 2: Multiple linear regression
 x = {{1, 1}, {2, 1}, {1, 2}, {2, 2}};
 y = {6, 8, 9, 11};
-weights = {0, 0, 0};
+weights = {0, 0, 0};//y= 1+2x1 + 3x2
 
 try{
     LinearRegression::StochasticGradientDescent sgd(0.001, 5000);
@@ -51,12 +49,11 @@ try{
     }else {
         cout<< "Multiple regression: FAIL \n";
         failed++;
-    }
+    }//same as test 1 but tolerance is 0.25
 }catch(...){
     cout<< "Multiple regression: FAIL \n";
     failed++;
 }
-
 //Test 3: Zero iterations should preserve initial weights
 try {
     LinearRegression::StochasticGradientDescent sgd(0.01, 0);
@@ -73,7 +70,6 @@ try {
     cout << "Zero iterations: FAIL\n";
     failed++;
 }
-
 //Test 4: Empty dataset should be rejected
 try{
     LinearRegression::StochasticGradientDescent sgd(0.01, 10);
@@ -82,12 +78,11 @@ try{
     failed++;
 }catch (const invalid_argument&){
     cout << "Empty dataset: PASS\n";
-    passed++;
+    passed++;//algorithm succesfuly rejected empty dataset
 }catch(...){
     cout << "Empty dataset: FAIL (unexpected exception)\n";
     failed++;
 }
-
 //Test 5:Mismatched dataset sizes should be rejected
 try{
     LinearRegression::StochasticGradientDescent sgd(0.01, 10);
@@ -101,7 +96,6 @@ try{
     cout << "Mismatched sizes: FAIL (unexpected exception)\n";
     failed++;
 }
-
 //Test 6: Invalid learning rate should be rejected
 try{
     LinearRegression::StochasticGradientDescent sgd(0, 10);
