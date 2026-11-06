@@ -30,7 +30,7 @@ A lightweight, modern C++23 library implementing **Linear Regression from scratc
 | **Nakyobe Geogin Martha** | Batch Gradient Descent & Stochastic Gradient Descent (`gradient_descent.hpp`) |
 | **Nantongo Melanie** | Multiple Linear Regression, Batch Gradient Descent (`gradient_descent.cpp`) & Standard Error Estimation|
 | **Borit Derrick Siwa** | Coefficient of Determination (R²) & Overcoming Overfitting using SMOTE data resampling (`coefficient_of_determination.h`, `smote.hpp`) |
-| **[MEMBER 6 NAME]** | Overcoming Overfitting using SMOTE data resampling (`smote.hpp`) |
+| **TABASANG PERRY AKOHNI** | Pearson Correlation Coefficient (`correlation_coefficient.hpp`, `correlation_coefficient.cpp`), Testing & Documentation |
 | **[MEMBER 7 NAME]** | Multiple Linear Regression matrix solver formulation |
 
 Back to [Table of Contents](#table-of-contents)
@@ -315,7 +315,8 @@ You can view individual member commits on our official GitHub Repository:
 * View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/mawaazi/group9_ML1/commits/main?author=geo2104)
 * View contributions by **Nantongo Melanie**: [Commits by melanie](https://github.com/mawaazi/group9_ML1/commits/main?author=nmelanie-ui)
 * View contributions by **Borit Derrick Siwa**: [Commits by Borit](https://github.com/mawaazi/group9_ML1/commits/main?author=BORITDERRICKSIWA7927)
-* View contributions by **TABASANG PERRY AKOHNI**: [Commits by Perry](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=perryakohni)
+
+* View contributions by **TABASANG PERRY AKOHNI**: [Commits by Perry](https://github.com/mawaazi/group9_ML1/commits/main?author=perryakohni)
 * View contributions by **[MEMBER 7]**: [Commits by MEMBER 7](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 
 Back to [Table of Contents](#table-of-contents)
