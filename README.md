@@ -314,7 +314,7 @@ You can view individual member commits on our official GitHub Repository:
 * View contributions by **Chelangat Faith**: [Commits by chela](https://github.com/mawaazi/group9_ML1/commits/main?author=Chelangat-faith)
 * View contributions by **Nakyobe Geogin Martha**: [Commits by geogin](https://github.com/mawaazi/group9_ML1/commits/main?author=geo2104)
 * View contributions by **Nantongo Melanie**: [Commits by melanie](https://github.com/mawaazi/group9_ML1/commits/main?author=nmelanie-ui)
-* View contributions by **[MEMBER 5]**: [Commits by MEMBER 5](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
+* View contributions by **Borit Derrick Siwa**: [Commits by Borit](https://github.com/mawaazi/group9_ML1/commits/main?author=BORITDERRICKSIWA7927)
 * View contributions by **[MEMBER 6]**: [Commits by MEMBER 6](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 * View contributions by **[MEMBER 7]**: [Commits by MEMBER 7](https://github.com/[YOUR-ORG]/group9_ML1/commits/main?author=[USERNAME])
 
